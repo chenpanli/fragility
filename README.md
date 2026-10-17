@@ -20,10 +20,8 @@
 <a href="https://chenpanli.github.io/fragility/"><img alt="Project page" src="https://img.shields.io/badge/Project_page-2E6DB4?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEwIi8%2BPGxpbmUgeDE9IjIiIHkxPSIxMiIgeDI9IjIyIiB5Mj0iMTIiLz48cGF0aCBkPSJNMTIgMmExNS4zIDE1LjMgMCAwIDEgNCAxMCAxNS4zIDE1LjMgMCAwIDEtNCAxMCAxNS4zIDE1LjMgMCAwIDEtNC0xMCAxNS4zIDE1LjMgMCAwIDEgNC0xMHoiLz48L3N2Zz4%3D"></a>
 </p>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/figure1-dark.png">
-  <img src="assets/figure1.png" alt="Three tasks solved alone each get more reasoning than they need. Composed into one prompt, every task's reasoning shrinks; tasks 1 and 3 still clear their requirement, while task 2, which needs long reasoning, falls below it and fails." width="90%">
-</picture>
+<img src="assets/figure1.png#gh-light-mode-only" alt="Three tasks solved alone each get more reasoning than they need. Composed into one prompt, every task's reasoning shrinks; tasks 1 and 3 still clear their requirement, while task 2, which needs long reasoning, falls below it and fails." width="90%">
+<img src="assets/figure1-dark.png#gh-dark-mode-only" alt="Three tasks solved alone each get more reasoning than they need. Composed into one prompt, every task's reasoning shrinks; tasks 1 and 3 still clear their requirement, while task 2, which needs long reasoning, falls below it and fails." width="90%">
 
 
 </div>
