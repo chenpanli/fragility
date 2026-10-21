@@ -3,8 +3,10 @@
 Does a model still solve a task when the task shares a prompt with others, if it solved
 that task in all three of its isolated attempts? It does not. Accuracy falls on every
 dataset except OneWordQA, and the fall grows with the number k of tasks in a
-composition. This folder draws the evidence and checks that neither truncation nor
-answer parsing explains it:
+composition. The one model that drops on OneWordQA, R1 Qwen3 8B, fails on the answer
+format: under composition it often writes `1.4` instead of `1. 4`, which is graded
+wrong. This folder draws the evidence and checks that neither truncation nor answer
+parsing explains it:
 
 - `gpqa-composed-sets-drop-k10.pdf`: the accuracy drop per model at k=10 on GPQA-Diamond
   (main text, Figure "success-conditioned-analysis", left). It also prints the number the
@@ -53,9 +55,8 @@ the composed k ascending, then k=1), with a fresh generator per figure.
 | tokens per character, for runs that recorded only characters | `runs/random-a/{integrals,mmlu,onewordqa}/<model>/` |
 | prompt tokens for those runs | the models' tokenizers in the Hugging Face cache (never downloaded) |
 
-Claude Opus 5 has composed runs on GPQA-Diamond only. Two pairs have none: MATH-500 with
-Qwen3 4B Thinking and OneWordQA with R1 Qwen3 8B. The extraction filter is `boxed_last` for
-Integrals and `lenient` elsewhere (`specs.DATASETS[...].filter`).
+Claude Opus 5 has composed runs on GPQA-Diamond only. The extraction filter is
+`boxed_last` for Integrals and `lenient` elsewhere (`specs.DATASETS[...].filter`).
 
 ## Steps
 
@@ -134,9 +135,9 @@ used, from `variants:` in the model YAML:
 - `ctx-64k`: R1 Llama 8B on the same three datasets.
 - `yarn-131k`: Qwen3 8B and Qwen3 14B on AIME.
 
-Two pairs have no composed run in the paper and are commented out: MATH-500 with
-Qwen3 4B Thinking, and OneWordQA with R1 Qwen3 8B. claude-opus-5 is commented out
-because it is billed.
+MATH-500 with Qwen3 4B Thinking and OneWordQA with R1 Qwen3 8B were run on 2026-10-20,
+after the others; the main text's context figure and table in the ICLR submission
+predate them. claude-opus-5 is commented out because it is billed.
 
 One job needs one H100 (80 GB). Most composed runs took under an hour. MATH-500 took
 about 5 hours, and AIME about 13 hours (up to 32 hours with the 131k window).

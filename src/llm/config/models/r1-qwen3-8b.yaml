@@ -14,7 +14,7 @@ max_tokens: 130048
 
 # Settings some runs of the paper used instead (`--model-variant`).
 variants:
-  # A shorter window: the composed runs on integrals and mmlu.
+  # A shorter window: the composed runs on integrals, mmlu and onewordqa.
   ctx-49k:
     max_model_len: 49152
     max_tokens: 48128

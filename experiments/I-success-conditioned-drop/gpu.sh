@@ -29,8 +29,7 @@ onewordqa qwen3-14b
 onewordqa qwen3-8-27b ctx-49k
 onewordqa r1-qwen-distill-7b ctx-49k
 onewordqa r1-llama-distill-8b ctx-64k
-# not in the paper:
-# onewordqa r1-qwen3-8b
+onewordqa r1-qwen3-8b ctx-49k
 gpqa-diamond qwen3-4b-thinking
 gpqa-diamond qwen3-8b
 gpqa-diamond qwen3-14b
@@ -45,8 +44,7 @@ gsm8k qwen3-8-27b
 gsm8k r1-qwen-distill-7b
 gsm8k r1-llama-distill-8b
 gsm8k r1-qwen3-8b
-# not in the paper:
-# math500 qwen3-4b-thinking
+math500 qwen3-4b-thinking
 math500 qwen3-8b
 math500 qwen3-14b
 math500 qwen3-8-27b
