@@ -131,6 +131,15 @@ commands, cost, and how the paper's runs differ from a clean rerun.
 | `strategyqa` | 687 | Hugging Face Hub, pinned revision |
 | `aime` | 60 (AIME 2024 and 2025) | Hugging Face Hub, pinned revisions |
 
+Our two pools are also on the Hugging Face Hub, each with the script that generated it:
+
+```python
+from datasets import load_dataset
+
+integrals = load_dataset("chenpanli/integrals", split="test")
+onewordqa = load_dataset("chenpanli/onewordqa", split="test")
+```
+
 The models are Qwen3 4B Thinking, Qwen3 8B, Qwen3 14B, Qwen3.8 27B and three
 DeepSeek-R1-distilled models (R1 Qwen 7B, R1 Llama 8B, R1 Qwen3 8B). Claude Opus 5 runs
 on GPQA-Diamond only, and OLMo 3 7B Think SFT, DPO and RLVR run on GPQA-Diamond,
